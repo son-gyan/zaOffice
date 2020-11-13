@@ -1,3 +1,15 @@
 <view>
-  竹安办公一体化系统
+  <view class="grid">
+        <block a:for="{{grid.list}}">
+            <view
+            style="width:{{100/(grid.columnNum || 3)}}%;padding-top:{{100/(grid.columnNum || 3)}}%;" 
+            class="grid-item" onTap="handleItemTap"
+            data-index={{index}}>
+                <view class="grid-item-wrapper">
+                    <image src="{{item.icon}}" class="grid-icon" mode="aspectFit" />
+                    <text class="grid-text">{{item.text}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
 </view>

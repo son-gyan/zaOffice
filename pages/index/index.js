@@ -1,4 +1,41 @@
 Page({
+  data: {
+    grid: {
+      list: [
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/HMVRwQoJUDyxZVkTyIqF.png',
+          title: '折叠面板',
+          entitle: 'Collapse',
+          page: '/page/biz/pages/collapse/index',
+        }, {
+          icon: 'https://zos.alipayobjects.com/rmsportal/HMVRwQoJUDyxZVkTyIqF.png',
+          title: '下拉菜单',
+          entitle: 'Dropdown',
+          page: '/page/biz/pages/dropdown/index',
+        }, {
+          icon: 'https://zos.alipayobjects.com/rmsportal/HMVRwQoJUDyxZVkTyIqF.png',
+          title: '通用错误页',
+          entitle: 'ErrorView',
+          page: '/page/biz/pages/error-view/index',
+        }, {
+          icon: 'https://zos.alipayobjects.com/rmsportal/HMVRwQoJUDyxZVkTyIqF.png',
+          title: '宫格',
+          entitle: 'Grid',
+          page: '/page/biz/pages/grid/index',
+        }
+      ],
+      columnNum: 3
+    }
+  },
+  handleItemTap(e){
+    debugger
+    dd.showToast({
+      content: `第${e.currentTarget.dataset.index}个Item`,
+      success: (res) => {
+        
+      },
+    });
+  },
   onLoad(query) {
     // 页面加载
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
